@@ -1,0 +1,120 @@
+{%  extends 'main.html' %}
+{%load static%}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Review</title>
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/particles.css' %}"> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <!-- <script src="{% static 'js/animations.js'%}"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-zrnmn8R8KkWl12rAZFt4yKjxplaDaT7/EUkKm7AovijfrQItFWR7O/JJn4DAa/gx" crossorigin="anonymous">
+<style>
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		    background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ0ODQ0NDQ0NDQ0HDQ8IDQgNFREWFhURFRMkHSgsGBolGxMVITEhJikrLjEuFyA2ODMsNygtLisBCgoKDQ0NDw0NDysZFRkyNzctKysrKysrKy0rKzcrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIALcBEwMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAAAAQIDBAb/xAAlEAEBAQACAQMEAgMAAAAAAAAAARECEjEh0fBRgbHBA6FBcZH/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQMC/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A+y4OkcuDpBy3FZlUFAAAAAAAFCCgKkUUikADABBaYDIoCAAAAgqUExGgEkUBQAHm4Okc+LpBw3BIoCyoA0MqKqagDQhoKRIoKqArUCCAAAAolFqAAAACpQoCAAAAACvNwdIxwdIM1VAFAAAFAAAAGmVgNCRUVYqKAAAACUKAAKAAqUAEABQARQFefh4bjPDw3BmoAAAAAoAAAAsRoCKkVFWKkUAAAAEoUAAAAVRFQEFQFBQQFFefh4bjHDw3BmoAAAoAAAAAA0y0BFBFWKkUAAAAECgACgpAVEVKAigCooAiivNw8Okc+HhuDNoQBRFFAAAAE1al/XsCtMe/7anzzRVVmfMN+fbQalaYv6v4a98/tBdN/wBfX19fr7p8/Jff7egLvz6iX/P3/Rfn/cAol+ZpqigAoAqJVQAACKkUAFFeTg6Ry4OkGbQAAAoAAACoAKSAK0AC41IzFQUwADEFCxMUAEUAAUQAAQFioopqoA8nB0jnw8NwZtAAoiigAAAAACoorRCEBYsSKCggAAAAIoCgAIKgCKgKqRRQAHj4eHSOfB0is2hFRRUAVAAABRAVViANRWVlBpWVBRAFEAVBBVEUFEAAS0ATTQaVmVRVEFHk4Okc+DpxRmoAqgAAAAAACiooCoA1FZi6CiaaCiaaKqagC6agC6agC6moACArUq6yKNaMgPNwvo6SuP8AHfRuUcOvY1jTQb1dc5TUHTTWNNBvTWNNBsZ1NFbVjV0GlY1dBpWdXQUQBRAFRNNFUQBRAFQABBVVUAVAB4P4+Xo6Tkojhex2ADsdgA7L2QBexoAdjsAq9jsAL2XsALOS9wA7nYAO53ADsnYAOx2AVex3ADunYAOx2ADuvZQVO4Cj/9k=);
+            background-size: cover;
+            background-position: center;
+		}
+
+		.user_card {
+			width: 350px;
+			margin-top: auto;
+			margin-bottom: auto;
+			background: #74cfbf;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+
+		}
+
+		.form_container {
+			margin-top: 20px;
+		}
+
+		#form-title{
+			color: #fff;
+		}
+		.login_btn {
+			width: 100%;
+			background: #33ccff !important;
+			color: white !important;
+		}
+		.login_btn:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.login_container {
+			padding: 0 2rem;
+		}
+		.input-group-text {
+			background: #f7ba5b !important;
+			color: white !important;
+			border: 0 !important;
+			border-radius: 0.25rem 0 0 0.25rem !important;
+		}
+		.input_user,
+		.input_pass:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+
+	</style>
+
+<style type="text/css">
+	.btn1{
+  border: sold 2px;
+  display: block;
+  /*text-align: justify-content;*/
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  /*position: absolute;*/
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #223;
+  padding: 17px 60px;
+  margin: 0 ;
+  margin-left: 37%;
+  text-decoration: none;
+  border-radius: 20px;
+  margin-top: 4px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+  width: 20%;
+  }
+</style>
+
+</head>
+<body >
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- Steps loading -->
+  <!--  <script type="text/javascript">
+    particlesJS.load('particles-js',"{% static 'json/particles.json' %}",function(){
+      console.log('particles json file loaded.')
+    });
+   </script> -->
+
+	  <br> <h1 class="ml3" style="text-align: center; font-weight: bold; color: black; font-family: Helvetica;">Summarized Review</h1>
+      <h2 style="margin-left: 15%; margin-right: 15%; margin-top: 8px; font-size: 25px; font-family: Arial; background-color: #E6F0F5; line-height: 1.5; text-align: justify; border-radius: 10px; border: 1px solid black; padding: 10px;">{{given_review1}}</h2><br><br>
+       <h1 class="ml3" style="text-align: center; color: black; font-weight: bold; font-family: Arial;">Sentiment</h1>
+      <h2 style="margin-left: 47%; font-family: Helvetica; font-size: 25px">{{review}}</h2>
+
+
+
+     </div>
+
+</body>
+{% endblock content %}
+
