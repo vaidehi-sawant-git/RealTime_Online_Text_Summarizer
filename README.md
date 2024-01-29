@@ -22,7 +22,7 @@ customer reviews, providing users with valuable insights for informed decision-m
 
 **Client:** HTML,CSS
 
-**IDE :** Django, 
+**IDE :** Django , Anaconda
 
 **Language :**  Python 
 
