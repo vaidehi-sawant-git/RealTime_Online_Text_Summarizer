@@ -38,9 +38,11 @@ customer reviews, providing users with valuable insights for informed decision-m
 
 ## Contributions
 
+**FrontEnd** : Saket Deshmukh, Satvik Chaudhari
+
 **Backend** : Vaidehi Sawant, Swaraj Pawar
 
-**FrontEnd** : Saket Deshmukh, Satvik Chaudhari
+
 
 
 
